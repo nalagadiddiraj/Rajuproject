@@ -1,0 +1,13 @@
+<!-- app/views/posts/new.html.erb -->
+<%= form_with(model: @post, url: posts_path, local: true) do |form| %>
+  <%= form.label :author_name %>
+  <%= form.text_field :author_name %>
+
+  <%= form.label :content %>
+  <%= form.text_area :content %>
+
+  <%= form.label :photo %>
+  <%= form.file_field :photo %>
+
+  <%= form.submit "Create Post" %>
+<% end %>

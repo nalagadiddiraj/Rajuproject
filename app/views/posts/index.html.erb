@@ -1,0 +1,10 @@
+<!-- app/views/posts/index.html.erb -->
+<% @posts.each do |post| %>
+  <h3><%= post.author_name %></h3>
+  <p><%= post.timestamp %></p>
+  <p><%= post.content %></p>
+  <% if post.photo.attached? %>
+    <%= image_tag post.photo %>
+  <% end %>
+  <hr>
+<% end %>
